@@ -12,7 +12,6 @@
 class solver2
 {
 public:
-	//we assume A.col(A.cols()-1) is the column corresponding to b. We want x(A.cols()-1) to be positive
 	int state; //state 0:in progress, 1:
 	Eigen::VectorXd x, y;
 	Eigen::MatrixXd A, ATA;
@@ -384,6 +383,8 @@ public:
 		return 1 / mi;
 	}
 };
+
+
 
 //make it so that the problem ha a strictly positive solution
 void makeSolvable(Eigen::MatrixXd &A)
